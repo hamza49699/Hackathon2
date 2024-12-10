@@ -195,8 +195,8 @@ const CheckoutPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="mt-12 border-t pt-6 bg-white">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between">
+      <footer className="mt-12 border-t pt-6 bg-black">
+        <div className="max-w-7xl mx-auto px-6 flex justify-between ">
           <p className="text-sm text-gray-600">&copy; 2024 Nike, Inc. All Rights Reserved.</p>
           <div className="space-x-4 flex items-center">
             <Image src="/17.png" alt="Visa" width={40} height={24} />

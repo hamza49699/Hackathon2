@@ -78,9 +78,14 @@ const NikeLoginForm = () => {
             Join Us
           </a>
         </p>
+        
       </div>
+      
     </div>
   );
+  
 };
 
+
 export default NikeLoginForm;
+

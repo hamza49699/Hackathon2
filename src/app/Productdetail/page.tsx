@@ -35,6 +35,7 @@ const ImageWithText = () => {
           Add to Cart
         </button>
       </div>
+      
     </div>
   );
 };

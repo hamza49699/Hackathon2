@@ -34,9 +34,10 @@ export default function RootLayout({
         <UtilityBar/>
         <Header/>
         {children}
-        <Footer/>
+        
         
       </body>
+      <Footer/>
     </html>
   );
 }

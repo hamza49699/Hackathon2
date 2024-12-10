@@ -124,8 +124,11 @@ const ProductListing = () => {
             </div>
           ))}
         </div>
+        
       </main>
+      
     </div>
+    
   );
 };
 
