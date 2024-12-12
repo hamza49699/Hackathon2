@@ -16,6 +16,8 @@ const ContactForm = () => {
             className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-300"
           >
             <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+
           </select>
         </div>
 

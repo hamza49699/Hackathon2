@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="w-screen bg-gray-100 font-sans">
+    <div className="w-screen bg-gray-100 font-sans ">
       <div className="bg-gray-100 py-4 text-center shadow-sm">
         <h2 className="text-xl font-semibold text-gray-900">Hello Nike App</h2>
         <p className="text-gray-600 text-sm">
@@ -14,14 +14,14 @@ export default function Hero() {
       </div>
 
       {/* Fullscreen Sneaker Image */}
-      <div className="relative w-full py-8 px-4 sm:px-12">
+      <div className="relative w-full py-8 px-4 sm:px-12 bg-white">
   <div className="max-w-12xl mx-auto">
     <Image
       src="/sneaker.png" // Replace with your actual image path
       alt="Sneaker"
       width={1000} // Adjust the width as per your requirements
       height={400} // Adjust the height as per your requirements
-      className="w-full h-auto rounded-lg object-cover object-center"
+      className="w-full h-auto  object-cover object-center"
     />
   </div>
 </div>
@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
           <div className="border border-gray-200 rounded-md p-4">
             <Image
-              src="/image2.png"
+              src="/image1.png"
               alt="Nike Air Max Pulse"
               width={300}
               height={300}
@@ -174,7 +174,7 @@ Cause Everyone should know the feeling of running in that perfect pair          
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     {/* Product 1 */}
     <div className="border border-gray-200 rounded-md p-4">
-      <img
+      <Image
         src="/image5.png" // Replace with your image path
         alt="Nike Dri-FIT ADV TechKnit Ultra"
         className="w-full object-cover rounded-md"
@@ -188,7 +188,7 @@ Cause Everyone should know the feeling of running in that perfect pair          
 
     {/* Product 2 */}
     <div className="border border-gray-200 rounded-md p-4">
-      <img
+      <Image
         src="/image6.png" // Replace with your image path
         alt="Nike Dri-FIT Challenger"
         className="w-full object-cover rounded-md"
@@ -202,7 +202,7 @@ Cause Everyone should know the feeling of running in that perfect pair          
 
     {/* Product 3 */}
     <div className="border border-gray-200 rounded-md p-4">
-      <img
+      <Image
         src="/image7.png" // Replace with your image path
         alt="Nike Dri-FIT ADV Run Division"
         className="w-full object-cover rounded-md"
@@ -216,7 +216,7 @@ Cause Everyone should know the feeling of running in that perfect pair          
 
     {/* Product 4 */}
     <div className="border border-gray-200 rounded-md p-4">
-      <img
+      <Image
         src="/image8.png" // Replace with your image path
         alt="Nike Fast"
         className="w-full object-cover rounded-md"
@@ -242,35 +242,47 @@ Cause Everyone should know the feeling of running in that perfect pair          
           </button>
         </div>
       </div>
-<div className="bg-white">
-    <h2 className="text-2xl mb-1 font-bold bg-white ml-16">Dont miss</h2>
-    
-    <div className="relative w-full py-8 px-4 sm:px-12">
+      <div className="relative bg-white pt-16 px-4">
+        <div className="max-w-7xl mx-auto text-left">
+          <h2 className="text-lg font-bold  tracking-wide pb-5 ">Dont Miss</h2>
+          </div>
+      </div>
+         
+          <div className="relative w-full py-8 px-4 sm:px-12 bg-white">
   <div className="max-w-12xl mx-auto">
     <Image
       src="/image9.png" // Replace with your actual image path
       alt="Sneaker"
       width={1000} // Adjust the width as per your requirements
       height={400} // Adjust the height as per your requirements
-      className="w-full h-auto rounded-lg object-cover object-center"
+      className="w-full h-auto  object-cover object-cente "
     />
   </div>
-  </div>
 </div>
+      
 <div className="bg-white pt-10">
     
 
-<div className="max-w-8xl pb-16 pl-14 pr-16 ">
-<h2 className="text-2xl mb-6 font-bold bg-white ml-8 ">The Essentials</h2>
+<div className="relative bg-white pt-16 px-4">
+        <div className="max-w-7xl mx-auto text-left">
+          <h2 className="text-lg font-bold  tracking-wide pb-5">The Essentails</h2>
+          </div>
+      </div>
+      </div>
+         
+           {/* Image Section */}
+           <div className="relative w-full py-8 px-4 sm:px-12 bg-white">
+  <div className="max-w-12xl mx-auto">
     <Image
       src="/Frame.png" // Replace with your actual image path
-      alt="Frame"
-      width={800} // Adjust the width as per your requirements
-      height={200} // Adjust the height as per your requirements
-      className="w-full h-auto rounded-lg object-cover object-center"
+      alt="Sneaker"
+      width={1000} // Adjust the width as per your requirements
+      height={400} // Adjust the height as per your requirements
+      className="w-full h-auto  object-cover object-cente "
     />
-    </div>
   </div>
+</div>
+      
     
 
 
