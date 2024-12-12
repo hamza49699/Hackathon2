@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           <div className="border border-gray-200 rounded-md p-4">
             <Image
-              src="/image1.png"
+              src="/30.png"
               alt="Nike Air Max Pulse"
               width={300}
               height={300}
@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
           <div className="border border-gray-200 rounded-md p-4">
             <Image
-              src="/image1.png"
+              src="/image2.png"
               alt="Nike Air Max Pulse"
               width={300}
               height={300}

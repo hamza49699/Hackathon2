@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           <div className="border border-gray-200 rounded-md p-4">
             <Image
-              src="/image1.png"
+              src="/30.png"
               alt="Nike Air Max Pulse"
               width={300}
               height={300}
@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
           <div className="border border-gray-200 rounded-md p-4">
             <Image
-              src="/image1.png"
+              src="/image2.png"
               alt="Nike Air Max Pulse"
               width={300}
               height={300}
@@ -177,6 +177,8 @@ Cause Everyone should know the feeling of running in that perfect pair          
       <Image
         src="/image5.png" // Replace with your image path
         alt="Nike Dri-FIT ADV TechKnit Ultra"
+        width={300}
+        height={300}
         className="w-full object-cover rounded-md"
       />
       <div className="mt-4">
@@ -191,6 +193,8 @@ Cause Everyone should know the feeling of running in that perfect pair          
       <Image
         src="/image6.png" // Replace with your image path
         alt="Nike Dri-FIT Challenger"
+        width={300}
+        height={300}
         className="w-full object-cover rounded-md"
       />
       <div className="mt-4">
@@ -205,6 +209,8 @@ Cause Everyone should know the feeling of running in that perfect pair          
       <Image
         src="/image7.png" // Replace with your image path
         alt="Nike Dri-FIT ADV Run Division"
+        width={300}
+        height={300}
         className="w-full object-cover rounded-md"
       />
       <div className="mt-4">
@@ -219,6 +225,8 @@ Cause Everyone should know the feeling of running in that perfect pair          
       <Image
         src="/image8.png" // Replace with your image path
         alt="Nike Fast"
+        width={300}
+        height={300}
         className="w-full object-cover rounded-md"
       />
       <div className="mt-4">
