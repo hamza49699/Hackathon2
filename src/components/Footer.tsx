@@ -1,8 +1,9 @@
+
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-8">
+    <div className="bg-black text-white py-8">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-4 gap-6 text-left">
         {/* Column 1 */}
         <div>
@@ -67,6 +68,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

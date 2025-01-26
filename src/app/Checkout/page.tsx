@@ -1,5 +1,14 @@
+
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+type CartProduct = {
+  productName: string;
+  price: number;
+  quantity: number;
+  imageUrl: string;
+};
 
 const ContactForm = () => {
   return (
@@ -17,7 +26,6 @@ const ContactForm = () => {
           >
             <option value="India">India</option>
             <option value="Pakistan">Pakistan</option>
-
           </select>
         </div>
 
@@ -95,6 +103,20 @@ const ContactForm = () => {
 };
 
 const CheckoutPage = () => {
+  const [cartItems, setCartItems] = useState<CartProduct[]>([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    // Retrieve cart data from localStorage
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "{}");
+    const items = Object.values(storedCart) as CartProduct[];
+    setCartItems(items);
+
+    // Calculate total price
+    const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    setTotalPrice(total);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
@@ -184,13 +206,17 @@ const CheckoutPage = () => {
           {/* Order Summary */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold mb-6">Order Summary</h2>
-            <div className="flex justify-between mb-4">
-              <p className="text-gray-600">Subtotal</p>
-              <p>₹ 20,890.00</p>
-            </div>
+            {cartItems.map((item) => (
+              <div key={item.productName} className="flex justify-between mb-4">
+                <span className="text-gray-600">
+                  {item.productName} (x{item.quantity})
+                </span>
+                <span>₹ {item.price * item.quantity}</span>
+              </div>
+            ))}
             <div className="flex justify-between text-lg font-bold border-t pt-4">
               <p>Total</p>
-              <p>₹ 20,890.00</p>
+              <p>₹ {totalPrice}</p>
             </div>
           </div>
         </div>

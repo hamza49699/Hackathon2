@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 
@@ -18,7 +19,11 @@ const UtilityBar = () => {
 
         {/* Utility Links on the Right */}
         <div className="flex space-x-4 font-medium">
-          <a href="/Home" className="hover:underline">
+        <a href="/Home" className="hover:underline">
+            Home
+          </a>
+        <span>|</span>
+          <a href="/Allproducts" className="hover:underline">
             Find a Store
           </a>
           <span>|</span>
@@ -33,6 +38,8 @@ const UtilityBar = () => {
           <a href="/Login" className="hover:underline">
             Sign In
           </a>
+          
+          
         </div>
       </div>
     </div>

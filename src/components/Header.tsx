@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 
@@ -19,38 +20,12 @@ const Navbar = () => {
           </div>
 
           {/* Menu */}
-          <ul className="hidden md:flex space-x-6 text-gray-600 font-medium">
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                New & Featured
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                Men
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                Women
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                Kids
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                Sale
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-900">
-                SNKRS
-              </a>
-            </li>
-          </ul>
+          
+             
+            
+            
+           
+          
 
           {/* Right Section (Search Bar and Icons) */}
           <div className="flex items-center space-x-3">
@@ -58,7 +33,7 @@ const Navbar = () => {
             <div className="relative w-[180px]">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
                 <Image
-                  src="/26.png" // Replace with your actual search icon path
+                  src="/26.png" 
                   alt="Search Icon"
                   width={20}
                   height={20}
