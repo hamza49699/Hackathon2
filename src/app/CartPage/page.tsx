@@ -1,4 +1,4 @@
-"useClient";
+"use client"; // Correct placement of the directive
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
