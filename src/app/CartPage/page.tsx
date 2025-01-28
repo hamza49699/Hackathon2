@@ -1,8 +1,8 @@
 "use client"; // Correct placement of the directive
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 type CartProduct = {
   productName: string;
@@ -30,16 +30,24 @@ export default function CartPage() {
   };
 
   const removeItem = (productName: string) => {
+    // Retrieve the cart object from localStorage
     const updatedCart = JSON.parse(localStorage.getItem("cart") || "{}");
-    delete updatedCart[productName];
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCartItems(Object.values(updatedCart));
+
+    // Delete the item with the given productName
+    if (updatedCart[productName]) {
+      delete updatedCart[productName];
+
+      // Update localStorage and state
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      setCartItems(Object.values(updatedCart));
+    }
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <div className="container mx-auto p-6 flex flex-col md:flex-row gap-6">
+      {/* Cart Items Section */}
       <div className="w-full md:w-2/3 bg-white p-6 shadow-md rounded-lg">
         <h1 className="text-2xl font-bold my-4">Bag</h1>
         {cartItems.length === 0 ? (
@@ -57,7 +65,9 @@ export default function CartPage() {
               <div className="ml-4 flex-1">
                 <h2 className="text-lg font-semibold">{item.productName}</h2>
                 <p className="text-gray-600">Quantity: {item.quantity}</p>
-                <p className="text-gray-900 font-semibold mt-2">MRP: ₹ {item.price.toLocaleString()}</p>
+                <p className="text-gray-900 font-semibold mt-2">
+                  MRP: ₹ {item.price.toLocaleString()}
+                </p>
                 <div className="flex items-center mt-2">
                   <button
                     onClick={() => updateQuantity(item.productName, -1)}
@@ -85,6 +95,7 @@ export default function CartPage() {
         )}
       </div>
 
+      {/* Summary Section */}
       <div className="w-full md:w-1/3 bg-white p-6 shadow-md rounded-lg">
         <h2 className="text-xl font-bold mb-4">Summary</h2>
         <div className="flex justify-between text-gray-600 mb-2">
