@@ -17,18 +17,22 @@ type Product = {
 };
 
 export default async function Home() {
+  // Fetch all products
   const products: Product[] = await sanityFetch({ query: categories });
+
+  // Filter the products to only get those at the indices 6, 13, 20, 26
+  const selectedProducts = [5, 13, 20, 23, 24, 30].map(index => products[index]).filter(Boolean); // .filter(Boolean) to remove any undefined values
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 p-6">
       {/* Page Header */}
       <header className="mb-6">
-        <h1 className="text-3xl font-bold text-center">Imported Shoes</h1>
+        <h1 className="text-3xl font-bold text-center">Nike Shirts</h1>
       </header>
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
+        {selectedProducts.map((product) => (
           <Link
             href={`/productdetails/${product._id}`}
             key={product._id}
@@ -53,3 +57,4 @@ export default async function Home() {
     </div>
   );
 }
+

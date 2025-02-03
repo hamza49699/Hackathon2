@@ -1,6 +1,11 @@
-
 import React from "react";
 import Image from "next/image";
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from "@clerk/nextjs";
 
 const UtilityBar = () => {
   return (
@@ -11,35 +16,34 @@ const UtilityBar = () => {
           <Image
             src="/logo.png" // Ensure the correct path to your logo image
             alt="Nike Logo"
-            width={40} // Adjusted size for better visibility
+            width={40}
             height={40}
             className="object-contain"
           />
         </div>
 
-        {/* Utility Links on the Right */}
-        <div className="flex space-x-4 font-medium">
-        <a href="/Home" className="hover:underline">
-            Home
-          </a>
-        <span>|</span>
-          <a href="/Allproducts" className="hover:underline">
-            Find a Store
-          </a>
+        {/* Utility Links + Sign In Button on the Right */}
+        <div className="flex space-x-4 font-medium items-center">
+          <a href="/Home" className="hover:underline">Home</a>
           <span>|</span>
-          <a href="#" className="hover:underline">
-            Help
-          </a>
+          <a href="/Allproducts" className="hover:underline">Find a Store</a>
           <span>|</span>
-          <a href="/Joinus" className="hover:underline">
-            Join Us
-          </a>
+          <a href="Contactus" className="hover:underline">Help</a>
           <span>|</span>
-          <a href="/Login" className="hover:underline">
-            Sign In
-          </a>
-          
-          
+          <a href="/Joinus" className="hover:underline">Join Us</a>
+          <span>|</span>
+
+          {/* Authentication Section */}
+          <SignedOut>
+            <SignInButton>
+              <button className="bg-black text-white px-4 py-1 rounded-md font-semibold shadow-md hover:bg-gray-800 transition duration-300">
+                Sign In
+              </button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
       </div>
     </div>

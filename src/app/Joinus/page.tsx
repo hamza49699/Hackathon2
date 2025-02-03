@@ -56,7 +56,7 @@ const Joinus = () => {
           <select
             className="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-black"
           >
-            <option value="India">India</option>
+            <option value="India">Pakistan</option>
             {/* Add more country options here if needed */}
           </select>
 
@@ -104,7 +104,7 @@ const Joinus = () => {
         {/* Sign-In Link */}
         <p className="text-center text-sm text-gray-600 mt-6">
           Already a Member?{" "}
-          <a href="#" className="text-black underline">
+          <a href="/Login" className="text-black underline">
             Sign in
           </a>
         </p>

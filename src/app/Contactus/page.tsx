@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 const HelpPage = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -36,7 +36,7 @@ const HelpPage = () => {
             <a href="#" className="text-blue-600 underline">join us</a> today.
           </p>
           <div className="flex gap-4 mt-4">
-            <button className="bg-black text-white px-6 py-2">JOIN US</button>
+            <Link href="/Joinus"><button className="bg-black text-white px-6 py-2">JOIN US</button></Link>
             <button className="bg-black text-white px-6 py-2">SHOP NIKE</button>
           </div>
         </section>
