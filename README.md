@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+I successfully developed a full-stack e-commerce website utilizing the API provided in Hackathon 3 and the template from Hackathon 2. The website's backend is powered by Sanity, which fetches data from the API and renders it in the browser.
+
+The website features a curated selection of Nike products, including shirts and shoes, categorized for easy browsing. Key functionalities include:
+
+1. Product browsing: Users can view all products, filtered by category (shirts or shoes).
+2. Product details: Users can access detailed information about each product.
+3. Cart management: Users can add multiple products to their cart.
+4. Checkout: Users can review selected products, prices, and totals before confirming their order.
+5. Order submission: Users can provide contact information and submit their order.
+
+To streamline order management, I also created a separate admin dashboard where I receive and track orders in real-time, in addition to receiving order notifications in Sanity Studio.This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
