@@ -84,10 +84,10 @@ const UtilityBar = () => {
           <span>|</span>
           <a href="/Allproducts" className="hover:underline">Find a Store</a>
           <span>|</span>
-          <a href="/Contactus" className="hover:underline">Help</a>
-          <span>|</span>
-          <a href="/Joinus" className="hover:underline">Join Us</a>
-          <span>|</span>
+          {/* <a href="/Contactus" className="hover:underline">Help</a> */}
+          {/* <span>|</span> */}
+          {/* <a href="/Joinus" className="hover:underline">Join Us</a> */}
+          {/* <span>|</span> */}
 
           {/* Authentication Section - Show Only If NOT in Excluded Pages */}
           {!isExcluded && (
